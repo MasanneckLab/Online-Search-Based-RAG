@@ -104,6 +104,8 @@ run_experiment_on_excel(
 )
 ```
 
+Note: OpenEvidence answers were collected manually (as there is no API access)
+
 ---
 
 ## 📊 Experimental Design
