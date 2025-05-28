@@ -1,0 +1,19 @@
+// Modular whitelisting by question and specialty; sequential processing
+digraph "Figure 2 - Proposed Architecture" {
+	fontname=Helvetica nodesep=0.4 rankdir=TB ranksep=0.4 splines=ortho
+	node [color=black fillcolor=white fontname=Helvetica fontsize=10 shape=box style="rounded,filled"]
+	edge [arrowhead=vee arrowsize=0.8 decorate=False fontcolor=black fontname=Helvetica fontsize=10 labelangle=45 labeldistance=4.0 labelfloat=true]
+	Q [label="Question / Query"]
+	subgraph cluster_selector {
+		color=none rank=same
+		SRC [label="Model or Database
+ for Source Selection" fillcolor="#e8f5ff"]
+	}
+	RAG [label="LLM + Online-RAG
+(Answer Generation)" fillcolor="#e5ffe8"]
+	ANS [label="Optimal Answer"]
+	Q -> SRC
+	SRC -> RAG
+	RAG -> ANS
+	dpi=600
+}

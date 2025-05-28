@@ -1,0 +1,35 @@
+// Strict vertical flow; polished & symmetric layout
+digraph "Figure 1 - Experimental Setup" {
+	fontname=Helvetica nodesep=0.6 rankdir=TB ranksep=0.6 splines=ortho
+	node [color=black fillcolor=white fontname=Helvetica fontsize=10 shape=box style="rounded,filled"]
+	edge [arrowhead=vee arrowsize=0.8 decorate=False fontcolor=black fontname=Helvetica fontsize=10 labelangle=45 labeldistance=4.0 labelfloat=true]
+	Q [label="AAN-Based Neurology
+Question Set
+(130 questions)"]
+	subgraph cluster_inputs {
+		color=none rank=same
+		P [label="Perplexity.ai
+3 Commercial LLMs + Online RAG
+Sonar (LLama3.3 70b-Based, No Reasoning)
+Sonar-Pro (LLama3.3 70b-based (Enhanced), No Reasoning)
+Sonar-Pro-Reasoning (DeepSeek-R1-Based, Reasoning)" fillcolor="#e8f5ff"]
+		OE [label="OpenEvidence
+(Medical RAG LLM)" fillcolor="#e5ffe8"]
+	}
+	WL [label="Whitelisting?
+AAN guidelines" fillcolor="#e8f5ff" margin=0.1 shape=diamond]
+	API [label="Perplexity API
+4 Prompts / Variant" fillcolor="#e8f5ff"]
+	EVAL [label="Blinded Expert Rating
+(Correct / Inaccurate / Wrong)
+& Source Quality Review"]
+	ANAL [label="Statistical Analysis" fillcolor="#f9f9f9"]
+	Q -> P
+	Q -> OE
+	P -> WL [weight=3]
+	WL -> API [label="Yes/No" labelangle=60 labeldistance=5 labelfloat=true weight=3]
+	API -> EVAL
+	OE -> EVAL
+	EVAL -> ANAL
+	dpi=600
+}
