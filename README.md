@@ -118,24 +118,6 @@ run_experiment_on_excel(
 - **Three-tier rating system**: Correct, Inaccurate, Wrong
 - **Source quality assessment**: Professional vs. non-professional sources
 
-### Model Configurations Tested
-```python
-experimental_conditions = {
-    "no_whitelisting": {
-        "models": ["sonar", "sonar-pro", "sonar-pro-reasoning"],
-        "whitelist": None
-    },
-    "with_whitelisting": {
-        "models": ["sonar", "sonar-pro", "sonar-pro-reasoning"], 
-        "whitelist": ["aan.com", "neurology.org"]
-    },
-    "baseline": {
-        "model": "OpenEvidence",
-        "whitelist": "assumed"  # Medical literature focused
-    }
-}
-```
-
 
 ---
 
