@@ -4,7 +4,7 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Under Review](https://img.shields.io/badge/Status-Under%20Review-orange.svg)](https://www.nature.com/npjdigmed/)
 
-> **Under Review**: This repository contains code and analysis for a study currently under review at *Nature Comminications*.
+> **Under Review**: This repository contains code and analysis for a study currently under review at *JMIR*.
 
 ## 📖 Overview
 
